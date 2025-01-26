@@ -1,0 +1,91 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #faf4dc;
+    color: #7c3b2e;
+    padding-top: 40px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .news-section, .center-section, .career-section {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  .news-section h2, .career-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .news-content img, .career-content img {
+    max-width: 100%;
+    border-radius: 10px;
+    padding-top: 40px;
+  }
+  
+  .news-content p, .career-content p {
+    margin: 20px 0;
+    font-size: 1.2em;
+    padding-top: 40px;
+  }
+  
+  .read-more {
+    font-size: 1em;
+    text-decoration: none;
+    color: #7c3b2e;
+    border: 1px solid #7c3b2e;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+  
+  .read-more:hover {
+    background-color: #7c3b2e;
+    color: #fff;
+  }
+  
+  .burger-layers {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .career-content .apply-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+  }
+  
+  .career-content input {
+    padding: 20px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .career-content button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #7c3b2e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .career-content button:hover {
+    background-color: #5a291f;
+  }
+  
