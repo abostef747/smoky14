@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #faf4dc;
+  color: #7c3b2e;
+  padding-top: 40px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px; /* Ensure proper spacing between sections */
+  flex-wrap: wrap; /* Allow sections to stack on smaller screens */
+}
+
+.news-section,
+.center-section,
+.career-section {
+  flex: 1;
+  margin: 10px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.news-section h2,
+.career-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.news-content img,
+.career-content img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.news-content p,
+.career-content p {
+  margin: 20px 
+}
