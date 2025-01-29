@@ -7,11 +7,10 @@
 
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
     margin: 0;
     padding: 0;
     background-color: #fdf3e4;
-    background-image: url('/muntasirImages/background.jpg');
+    background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,8 +19,9 @@ body {
     width: 100%;
 }
 
+/* Header Section */
 .menu-header {
-    margin: 0px;
+    margin: 0;
     background-color: #f2e8c6;
     justify-content: center;
     text-align: center;
@@ -31,10 +31,12 @@ body {
 
 .menu-header h1 {
     font-family: 'Flame Bold', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
+    /* Smaller font size for mobile */
     margin: 0;
     color: #800000;
-    padding: 20px;
+    padding: 10px;
+    /* Reduced padding for mobile */
     letter-spacing: 2px;
     text-transform: uppercase;
 }
@@ -42,23 +44,39 @@ body {
 /* Navigation Bar */
 .menu-nav {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 120px;
-    width: 100%;
+    flex-wrap: nowrap;
+    /* Prevent wrapping */
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    justify-content: flex-start;
+    /* Align items to the start */
+    gap: 10px;
+    /* Reduced gap for mobile */
+    padding: 10px;
+    /* Added padding for better spacing */
+
+    background-color: #f2e8c6;
+    /* Match header background */
 }
-
-
 
 .menu-nav a {
     text-decoration: none;
     color: #800000;
     font-family: 'Londrina Solid', cursive;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    /* Smaller font size for mobile */
     position: relative;
     transition: color 0.3s, transform 0.3s;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    /* Added padding for better spacing */
+    flex: 0 0 auto;
+    /* Prevent flex items from shrinking */
+    white-space: nowrap;
+    /* Prevent text from wrapping */
 }
 
 .menu-nav a:hover {
@@ -67,45 +85,59 @@ body {
 }
 
 .menu-nav img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 0px;
+    width: 50px;
+    /* Smaller images for mobile */
+    height: 50px;
+    margin-bottom: 5px;
+    /* Reduced margin for mobile */
 }
 
 /* Banner Section */
 .banner {
     display: grid;
-    grid-template-columns: 500px auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Responsive grid layout */
 
-    gap: 40px;
-    margin-bottom: 10px;
+    /* Stacked layout for mobile */
+    gap: 20px;
+    /* Added gap between sections */
     padding: 10px;
+    /* Added padding for better spacing */
 }
 
-.delivery-info {
+.delivery-info,
+.offer.buy-one-get-one {
+    grid: 1;
+    /* Equal size for both sections */
     background-color: #800000;
     color: #dad4b5;
-    padding: 0px;
-    border-radius: 5px;
-    text-align: center;
-    transition: transform 0.3s;
-    display: grid;
-    align-items: center;
-    justify-content: center;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: right;
+    transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    margin: 0px;
+    height: 300px;
+    /* Fixed height for both banners */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    /* Stacked layout for mobile */
+
 }
 
-.delivery-info:hover {
+.delivery-info:hover,
+.offer.buy-one-get-one:hover {
     transform: translateY(-10px);
 }
 
 .delivery-info img {
-    width: 350px;
-    /* Enlarged image */
-    margin-bottom: 0px;
+    width: 100%;
+    max-width: 250px;
+    /* Responsive image size */
+    margin-bottom: 10px;
+    /* Reduced margin for mobile */
     animation: float 3s infinite ease-in-out;
+
+
 }
 
 @keyframes float {
@@ -122,52 +154,38 @@ body {
 
 .delivery-info h2 {
     font-family: 'Flame Bold', sans-serif;
-    font-size: 3rem;
-    margin: 0px;
-
+    font-size: 1.5rem;
+    /* Smaller font size for mobile */
+    margin: -200px 0;
 }
 
 .delivery-info p {
     font-family: 'Londrina Solid', cursive;
-    font-size: 2.5rem;
-    margin: 5px 0;
+    font-size: 1.2rem;
+    /* Smaller font size for mobile */
+    margin: -100px 0;
 }
 
-/* Offer Section */
 .offer.buy-one-get-one {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    padding: 0px;
+    background-image: url('buy1get1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #F5F5DC;
-    margin: 20px;
-    overflow: hidden;
-    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
-}
-
-.buy1get1Container {
-    margin: 0;
-    padding: 0;
-}
-
-.offer.buy-one-get-one:hover {
-    transform: translateY(-10px);
 }
 
 .offer.buy-one-get-one h3 {
     font-family: 'Flame Bold', sans-serif;
-    font-size: 3rem;
-    margin: 50px 0;
-    padding: 0px;
+    font-size: 1.5rem;
+    /* Smaller font size for mobile */
+    margin: 10px 0;
     text-transform: uppercase;
 }
 
 .offer.buy-one-get-one p {
     font-family: 'Londrina Solid';
-    font-size: 2.5rem;
+    font-size: 1.2rem;
+    /* Smaller font size for mobile */
     margin: 5px 0;
 }
 
@@ -176,35 +194,31 @@ body {
     font-weight: bold;
 }
 
-.offer.buy-one-get-one {
-    background-image: url('/muntasirImages/buy1get1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0px;
-}
-
 /* Deals Section */
 .deals {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 20px;
-
+    flex-direction: column;
+    /* Stacked layout for mobile */
+    gap: 20px;
+    /* Added gap between sections */
+    padding: 10px;
+    /* Added padding for better spacing */
 }
 
 .deals div {
+    flex: 1;
+    /* Equal size for all deals */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+    height: 400px;
+    /* Fixed height for portrait-like cards */
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .deals div:hover {
@@ -213,18 +227,8 @@ body {
 }
 
 .deal1 {
-
-    color: #800000;
-    margin: auto;
-    background-image: url('brushStrokes.png');
-    background: rgba(183, 192, 189, 0.6);
-
-}
-
-.deal1 h3 {
-    margin: 5px;
-
-
+    color: #FFCE1B;
+    background: #982b1c;
 }
 
 .deal2 {
@@ -238,31 +242,36 @@ body {
 }
 
 .deal3 h4 {
-    font-size: 3.2rem;
+    font-size: 2rem;
+    /* Smaller font size for mobile */
     color: #800000;
-    margin: -35px;
+    margin: -20px;
+    /* Adjusted margin for mobile */
     font-family: 'Lovers Quarrel';
 }
 
 .deals img {
     width: 100%;
+    max-width: 300px;
+    /* Responsive image size */
     height: auto;
     border-radius: 10px;
-    margin: 20px;
+    margin: 10px 0;
+    /* Reduced margin for mobile */
 }
 
 /* Font Styling for Deals */
 .deals h3,
 .deals p {
-    font-family: 'londrina solid';
+    font-family: 'Londrina Solid';
     text-transform: capitalize;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    /* Smaller font size for mobile */
 }
 
 .deals h3 {
-    font-size: 2.5rem;
-
-
+    font-size: 1.8rem;
+    /* Adjusted font size for mobile */
 }
 
 .deal1 .highlight {
@@ -275,6 +284,81 @@ body {
     font-weight: bold;
 }
 
-
 /* Media Queries for Larger Screens */
-/* Media Queries for smaller Screens */
+@media (min-width: 768px) {
+    .menu-header h1 {
+        font-size: 3rem;
+        /* Larger font size for tablets and desktops */
+        padding: 20px;
+    }
+
+    .menu-nav {
+        gap: 20px;
+        /* Increased gap for tablets and desktops */
+        padding: 20px;
+        justify-content: center;
+        /* Center items on larger screens */
+    }
+
+    .menu-nav a {
+        font-size: 1rem;
+        /* Larger font size for tablets and desktops */
+    }
+
+    .menu-nav img {
+        width: 80px;
+        /* Larger images for tablets and desktops */
+        height: 80px;
+    }
+
+    .banner {
+        flex-direction: row;
+        /* Side-by-side layout for tablets and desktops */
+    }
+
+    .delivery-info,
+    .offer.buy-one-get-one {
+        height: 400px;
+        /* Slightly larger height for tablets and desktops */
+    }
+
+    .delivery-info h2 {
+        font-size: 2rem;
+        /* Larger font size for tablets and desktops */
+    }
+
+    .delivery-info p {
+        font-size: 1.5rem;
+        /* Larger font size for tablets and desktops */
+    }
+
+    .offer.buy-one-get-one h3 {
+        font-size: 2rem;
+        /* Larger font size for tablets and desktops */
+    }
+
+    .offer.buy-one-get-one p {
+        font-size: 1.5rem;
+        /* Larger font size for tablets and desktops */
+    }
+
+    .deals {
+        flex-direction: row;
+        /* Side-by-side layout for tablets and desktops */
+    }
+
+    .deals div {
+        height: 450px;
+        /* Slightly larger height for tablets and desktops */
+    }
+
+    .deals h3 {
+        font-size: 2rem;
+        /* Larger font size for tablets and desktops */
+    }
+
+    .deals p {
+        font-size: 1.5rem;
+        /* Larger font size for tablets and desktops */
+    }
+}
