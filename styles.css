@@ -135,45 +135,6 @@ html {
 
 }
 
-.menuContainer {
-    display: block;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
-
-
-.menuContainer a {
-    text-decoration: none;
-    color: #800000;
-    font-size: 25px;
-    font-family: 'londrina solid';
-}
-
-.menuContainer a:hover {
-    text-decoration: none;
-    color: #ffce1b;
-    font-size: 25px;
-    font-family: 'londrina solid';
-    background-color: #ffffff;
-    padding: 10px;
-    border-radius: 10px;
-    transition: padding 0.5s;
-    box-shadow: 0px 0px 5px 1px black;
-}
-
-.personalSettings ul {
-    margin: 0;
-    padding: 5px;
-    list-style: none;
-    padding: auto;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
 .headerbottom {
     width: 100%;
     display: flex;
