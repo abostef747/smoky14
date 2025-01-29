@@ -12,25 +12,63 @@ html {
     width: 100%;
 }
 
+.topnav {
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #800000;
+    border-radius: 20%;
+    color: rgb(255, 255, 255);
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
-    .container {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .menuContainer {
+    .topnav a:not(:first-child) {
         display: none;
     }
 
-    .menuContainer a {
+    .topnav a.icon {
+        float: right;
         display: block;
-        padding: 10px;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 768px) {
+    .topnav.responsive {
+        position: relative;
     }
 
-    .personalSettings ul {
-        display: none;
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
 }
 
 
@@ -105,16 +143,6 @@ html {
     padding: 10px;
 }
 
-.logo {}
-
-.nav ul {
-    display: flex;
-    flex-wrap: nowrap;
-    list-style: none;
-    align-items: center;
-    gap: 20px;
-}
-
 
 .menuContainer a {
     text-decoration: none;
@@ -148,16 +176,24 @@ html {
 
 .headerbottom {
     width: 100%;
-    background-image: url('images/tasty_burgers.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    contain: ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
-.headerbottom img {}
+.headerbottom img {
+    height: 83vh;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+    font-size: 200%;
+    color: #ffffff;
+}
 
 .contact {
     text-align: right;
