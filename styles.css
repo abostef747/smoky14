@@ -48,6 +48,13 @@
     }
 
     @media screen and (max-width: 768px) {
+        .headerbottom {
+            background-image: url('images/tasty_burgers.png');
+            width: 100%;
+            height: 80vh;
+            background-size: 100% 100%;
+        }
+
         .topnav a:not(:first-child) {
             display: none;
         }
@@ -100,24 +107,49 @@
     }
 
     .headerbottom {
+        background-image: url('images/tasty_burgers.png');
         width: 100%;
+        height: 80vh;
+        background-size: 70% 100%;
+        background-position: right;
+        background-repeat: no-repeat;
         display: flex;
         justify-content: space-between;
+
         align-items: center;
         margin: 0;
         padding: 0;
         overflow: hidden;
     }
 
-    .headerbottom img {
-        height: 83vh;
-    }
 
     .content {
+        height: auto;
+        width: 100%;
         text-align: center;
         padding: 20px;
         font-size: 200%;
         color: #ffffff;
+        backdrop-filter: blur(4px);
+    }
+
+    .content h1 {
+
+        font-size: 3rem;
+        margin-bottom: 100px;
+    }
+
+    .content p {
+
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .content button {
+        margin-top: 50px;
+        font-size: 3rem;
+        margin-bottom: 10px;
+        font-family: 'londrina solid';
     }
 
     .contact {
@@ -601,8 +633,13 @@
     }
 
     .card {
-        position: relative;
-        border-radius: 10px;
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         overflow: hidden;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         background-color: #fff;
@@ -612,32 +649,13 @@
     }
 
     .card img {
-        width: 100%;
+        width: 200px;
         height: auto;
         background-color: #efdec7;
         border-radius: 15px;
         padding: 10px;
     }
 
-    .top-right-button {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background-color: #ffcc00;
-        border: none;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-    }
-
-    .top-right-button img {
-        width: 18px;
-        height: 18px;
-    }
 
     .card h3 {
         font-size: 22px;
@@ -672,7 +690,82 @@
         font-weight: bold;
         cursor: pointer;
     }
+
+    @media screen and (max-width: 650px) {
+        .scroll-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            overflow-y: auto;
+            height: 100vh;
+            width: 100%;
+            gap: 20px;
+            scroll-snap-type: y mandatory;
+            padding-bottom: 10px;
+        }
+
+        .card {
+            height: auto;
+            width: 90%;
+            /* Adjust width to fit within the container */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            padding: 15px;
+            scroll-snap-align: start;
+            position: relative;
+        }
+
+        .card img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            background-color: #efdec7;
+            border-radius: 15px;
+            padding: 10px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            font-weight: bold;
+            text-align: left;
+            margin: 10px 0;
+        }
+
+        .card p {
+            text-align: left;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .card .price {
+            text-align: right;
+            color: #871f1f;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .select-button {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 15px;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
 }
+
 
 .page4 {
     background-color: beige;
@@ -681,6 +774,7 @@
 .page5 {
 
     body {
+
         margin: 0;
         padding: 20px;
         height: 500px;
@@ -699,9 +793,6 @@
         flex-direction: column;
         text-align: center;
         padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        max-width: 90%;
         margin: 0 auto;
     }
 
@@ -715,7 +806,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative;
     }
 
     .nav-button {
@@ -804,6 +894,17 @@
 
     /* Tablet Screens */
     @media (max-width: 768px) {
+        .reviews {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            overflow: hidden;
+            scroll-behavior: smooth;
+        }
+
         h1 {
             font-size: 1.8rem;
         }
@@ -812,6 +913,14 @@
             font-size: 1.2rem;
             height: 35px;
             width: 35px;
+        }
+
+        .nav-button.left {
+            rotate: 90deg;
+        }
+
+        .nav-button.right {
+            rotate: 90deg;
         }
 
         .review {
@@ -872,7 +981,6 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: Arial, sans-serif;
     }
 
     footer {
@@ -975,7 +1083,6 @@
     }
 
     .social-icons {
-        margin-top: 15px;
         display: flex;
         gap: 15px;
     }
