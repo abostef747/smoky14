@@ -698,7 +698,7 @@
             justify-content: flex-start;
             align-items: center;
             overflow-y: auto;
-            height: 100vh;
+            height: auto;
             width: 100%;
             gap: 20px;
             scroll-snap-type: y mandatory;
@@ -787,7 +787,7 @@
     .review-carousel {
         width: 100%;
         background-color: #800000;
-        height: 700px;
+        height: 800px;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -894,6 +894,11 @@
 
     /* Tablet Screens */
     @media (max-width: 768px) {
+        .pagination {
+            margin-top: 20px;
+            justify-content: center;
+        }
+
         .reviews {
             display: flex;
             flex-wrap: wrap;
